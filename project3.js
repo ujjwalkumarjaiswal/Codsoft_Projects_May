@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
     const display = document.getElementById('display');
     const buttons = Array.from(document.querySelectorAll('.btn'));
@@ -11,4 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 display.innerText = '';
             } else if (value === '=') {
                 try {
-                    display.innerText = eval(display.innerText
+                    display.innerText = eval(display.innerText);
+                } catch {
+                    display.innerText = 'Error';
+                }
+            } else {
+                display.innerText += value;
+            }
+        });
+    });
+});
